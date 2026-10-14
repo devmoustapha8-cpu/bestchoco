@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BestChoco - Site Vitrine</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Fraunces:ital,wght@1,600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#F6B91A;--choc:#2B120A;--choc2:#5A2A12;--cream:#FFF3D6;--bg:#140805;box-sizing:border-box;padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Bricolage Grotesque',Impact,'Arial Black',sans-serif;background:var(--bg);color:var(--cream);min-height:100vh}
+a{color:var(--gold);text-decoration:none;transition:color .2s}
+a:hover{color:var(--choc2)}
+.container{max-width:1440px;margin:0 auto;padding:0 1.5rem}
+.header{position:fixed;top:0;left:0:right:0;background:rgba(20,8,5,.8);backdrop-filter:blur(10px);border-bottom:1px solid rgba(246,185,26,.2);z-index:100}
+.header .container{display:flex;justify-content:space-between;align-items;height:4.5rem}
+.logo{font-family:'Fraunces',Georgia,serif;font-size:1.5rem;font-weight:600;color:var(--gold)}
+.nav a{margin-left:2rem;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em}
+.hero{padding:12rem 1.5rem 6rem;background:url('/assets/images/bestchoco-open.png') center/cover no-repeat;color:var(--cream)}
+.hero .container{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:end}
+.hero h1{font-size:4rem;font-weight:800;line-height:.9;letter-spacing:-.02em;margin-bottom:1rem}
+.hero p{max-width:ch-90}.cta{background:var(--gold);color:var(--choc);border:0;padding:.8rem 1.5rem;font-weight:700;font-size:1rem;border-radius:6px;margin-top:2rem}
+.section{padding:6rem 1.5rem;max-width:1440px;margin:0 auto}
+.section h2{font-family:'Fraunces',Georgia,serif;font-size:2rem;font-weight:600;color:var(--gold);margin-bottom:2rem}
+.grid{display:grid;gap:1rem}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.img-wrapper{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:12px}
+.img-wrapper img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.img-wrapper:hover img{transform:scale(1.05)}
+.contact{max-background:var(--choc);color:var(--cream)}
+.form{max-width:600px;margin:0 auto}
+.form .form-group{margin-bottom:1.5rem}
+.form label{display:block;font-size:.8rem;color:var(--gold);margin-bottom:.5rem}
+.form input,.form textarea{width:100%;padding:.8rem 1rem;background:var(--cream);border:1px solid var(--gold);color:var(--choc);font-family:inherit;font-size:1rem;border-radius:6px}
+.form textarea{min-height:120px;resize:vertical}
+.form button{width:100%;background:var(--gold);color:var(--choc);border:0;padding:.8rem 1rem;font-weight:700;font-size:1rem;border-radius:6px;margin-top:1rem}
+.footer{background:var(--choc);color:#aaa;padding:3rem 1.5rem text-center}
+@media(max-width:1024px){.hero .container{grid-template-columns:1fr;padding:0 1rem}.hero h1{font-size:3rem}}.no-motion*{-webkit-animation:none!important;animation:none!important;transition:none!important}
+</style></head><body>
+<header class="header"><div class="container"><a href="#" class="logo">BestChoco</a><nav class="nav"><a href="#article1">Histoire</a><a href="#article2">Galerie</a></nav></div></header>
+<main>
+<section class="hero"><div class="container">
+<h1>BestChoco - Le vrai goût du chocolat</p>
+<p>Artisan chocolatier depuis 2024 à Conakry, Guinée. Sélection rigoureuse des fèves de cacao et recettes traditionnelles transmises de génération en génération.</p>
+<div class="cta">Découvrir nos produits</div>
+</div></section>
+
+<section class="section" id="article1"><div class="container"><h2>Nos Valeurs</h2><ul class="list-disc list-inside space-y-4 text-lg"><li>Qualité artisanale</li><li>Tradition familiale</li><li>Sourcing éthique</li></ul><div class="mt-8"><img src="/assets/images/bestchoco-open.png" alt="Pot BestChoco ouvert" class="img-wrapper" loading="lazy"></div></div></section>
+
+<section class="section" id="article2" style="background:var(--choc);color:var(--cream)"><div class="container"><h2>Découvrez BestChoco</h2><div class="grid grid-3 mt-8"><div class="img-wrapper"><img src="/assets/images/bestchoco-open.png" alt="Pot BestChoco" loading="lazy"></div><div class="img-wrapper"><img src="/assets/images/bestchoco-tasting.png" alt="Dégustation BestChoco" loading="lazy"></div><div class="img-wrapper"><img src="/assets/images/levure.png" alt="Artisanat BestChoco" loading="lazy"></div></div><form class="form mt-8"><div class="form-group"><label>Nom</label><input type="text" required></div><div class="form-group"><label>Email</label><input type="email" required></div><div class="form-group"><label>Message</label><textarea rows="4" required></textarea></div><button type="submit">Envoyer Message</button></form></div></section>
+</main>
+<footer class="footer"><p>BestChoco · Artisan chocolatier · Conakry, Guinée</p></footer>
+<script>document.querySelectorAll('.img-wrapper img').forEach(i=>i.addEventListener('mouseenter',()=>i.style.transform='scale(1.05)').addEventListener('mouseleave',()=>i.style.transform=''))</script></body></html>
